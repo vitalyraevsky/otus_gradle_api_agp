@@ -98,6 +98,7 @@ tasks.register("otus") {
     }
 }
 
+
 simple {
     message = ""
 }
