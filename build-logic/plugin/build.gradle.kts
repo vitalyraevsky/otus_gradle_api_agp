@@ -10,6 +10,7 @@ java {
 }
 
 dependencies {
+    compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
     compileOnly(libs.android.gradlePlugin.api)
     implementation(gradleKotlinDsl())
 }

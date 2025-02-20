@@ -13,6 +13,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+    }
+    versionCatalogs {
+        create("lib") {
+            from(files("../gradle/libs.versions.toml"))
+        }
     }
 }
 
