@@ -14,5 +14,16 @@ class SimplePlugin : Plugin<Project> {
             //message.set(extension.message)
             //message.value(extension.message)
         }
+
+        val generateReport = project.tasks.register<GenerateReportTask>("generateReport") {
+            group = "otus"
+            sourceDirectory = project.file(project.layout.projectDirectory.file("src/main"))
+            reportFile = project.layout.buildDirectory.file("reports/directoryReport.txt").get().asFile
+        }
+
+        project.tasks.register<CreateTextFilesTask>("createTextFilesTask") {
+            group = "otus"
+        }
+
     }
 }
